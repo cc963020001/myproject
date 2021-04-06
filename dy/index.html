@@ -1,0 +1,99 @@
+<?php 
+session_start();
+$uid= isloginOk();
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title><?php echo $ad['name'] ?>-高清无广告视频解析接口！</title>
+    <meta name="description" content="<?php echo $ad['content'] ?>">
+    <meta name="keywords" content="<?php echo $ad['keyword'] ?>">
+	<meta http-equiv="Cache-Control" content="no-transform">
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="style/css/base.css">
+	<link rel="stylesheet" href="style/css/index.css" />
+	<script src="style/js/core.js"></script>
+	<script language="Javascript">document.oncontextmenu=new Function("event.returnValue=false");document.onselectstart=new Function("event.returnValue=false");</script>
+</head>
+<body>
+    <div class="container">
+	    <div class="video-bg">
+		     <video muted data-autoplay loop="loop" autoplay="autoplay" src="https://img-baofun.zhhainiao.com/pcwallpaper_ugc/preview/975737e32c47455f9c8bbd3e1d8ca8c1_preview.mp4" class="video-tvc" id="video-tvc" data-object-fit>抱歉，您的浏览器不支持内嵌视频</video></div>
+			     <div class="content">
+				     <header class="header claerFloat">
+			             <div class="header-left">
+			                 <a href="/"><img src="images/logo.png" alt="logo" style="height: 60px;"></a>
+			             </div>
+			 <div class="header-right">
+			 <ul class="header-links">
+			 <li class="header-links-item"><a href="/index.html">主页</a></li>
+		    <li class="header-links-item"><a href="https://www.kdocs.cn/l/csmDLAlYHHOW">接口测试</a></li>
+			<li class="header-links-item"><a href="https://www.kdocs.cn/l/csmDLAlYHHOW">使用教程</a></li>
+			<li class="header-links-item"><a href="https://jq.qq.com/?_wv=1027&k=rYKEJEIb">交流群</a></li>
+			 <li class="header-links-item hover"><a>旗下站点</a>
+			     <div class="menu">
+				       <a href="https://www.2024tv.com/">深度视频</a>
+				       <a href="https://www.360mb.net/">360模板吧</a>
+				 </div></li>
+		    <li class="header-links-item"><a href="/user">登录/注册</a></li>
+			<li class="header-links-item"><div class="unmute"></div></li>
+			</ul>
+			</div>
+			</header>
+			<div class="middle clearFloat">
+			    <div class="slogan">
+				    <img src="images/slogan.png" alt="slogan">
+				</div>
+				<div class="btn-list">
+				    <a class="btn-primary icon-QRcode">
+	                <img src="images/QRcode.jpg" alt="qrcode">
+				</a>
+				<div class="btn-primary">
+				    <a class="btn-hover icon-qq btn-link" href="http://wpa.qq.com/msgrd?v=3&uin=861272290&site=qq&menu=yes"></a>
+				</div>
+				<div class="btn-primary">
+				    <a class="btn-hover icon-emails btn-link" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=861272290@qq.com">
+				</a>
+				</div>
+				</div>
+				</div>
+	<footer class="footer">
+	    <nav class="nav-warpper">
+	        <span>    </span><a href="warpper/.html">         </a> 
+	    </nav>
+    <div class="feedback-info">
+<nav class="nav-warpper"><span>|</span> <a href="/cnl_music/music_tab/">音乐</a> <span>|</span><a href="/agreement/">用户服务协议</a> <span>|</span> <a href="/privacy/">隐私政策</a> <span>|</span> <a href="/recovery_account/">账号找回</a> <span>|</span><a href="https://www.douyin.com/resource/douyin?source=dou">广告投放</a> <span>|</span> <a href="/business_license/">营业执照</a> <span>|</span></nav>
+		   <p><span id="copyYear">2020</span>&nbsp;©&nbsp;抖音&nbsp;&nbsp;|&nbsp;京ICP备16016397号-3&nbsp;|&nbsp;北京微播视界科技有限公司 |&nbsp; 京B2-20170846</p>
+		   <p><a target="_blank" href="http://www.12377.cn/">中国互联网举报中心</a>&nbsp;|&nbsp;网络文化许可证-京网文-（2016）2282-264号&nbsp;|&nbsp;客户服务热线：400-992-2556&nbsp;|&nbsp;违法和不良信息举报：400-140-2108&nbsp;|&nbsp;举报邮箱：jubao@douyin.com</p>
+    <div class="Icon-box">
+	             <img src="https://s3.pstatp.com/aweme/resource/web/static/image/gongan_d0289dc.png">
+	             <a target="_blank" href="http://pay.nh95.cn">京公网安备 11010802023605号</a> <span>&nbsp; | &nbsp;地址&nbsp;:&nbsp;北京市海淀区知春路51号4层408&nbsp;</span>
+	         </div>                                                                                                                                                        
+	         </div>                                                                                                                                                                                                                                                                                                  
+	</footer>
+	</div>
+	</div>	
+    <script type="text/javascript">
+    (function() {
+    $(function() {
+        $('#copyYear').text((new Date).getFullYear());
+    })
+    })();
+    </script>
+</body>	
+	<script>var video = $('#video-tvc')[0];
+    $('.unmute').click(function() {
+        if ($(this).hasClass('mute')) {
+            video.muted = true;
+        }
+        else {
+            video.muted = false;
+        }
+        $(this).toggleClass('mute')
+    })
+    </script>
+</html>
