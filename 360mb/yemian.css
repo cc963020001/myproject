@@ -463,11 +463,6 @@ content: " ";
 -moz-box-sizing: border-box;
 box-sizing: border-box;
 }
-/*输入框*/
-
-.input-group-addon:first-child {
-border-right: 0;
-}
 
 .input-group .form-control:first-child, .input-group-addon:first-child, .input-group-btn:first-child>.btn, .input-group-btn:first-child>.btn-group>.btn, .input-group-btn:first-child>.dropdown-toggle, .input-group-btn:last-child>.btn-group:not(:last-child)>.btn, .input-group-btn:last-child>.btn:not(:last-child):not(.dropdown-toggle) {
 border-top-right-radius: 0;
