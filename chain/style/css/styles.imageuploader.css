@@ -414,9 +414,9 @@ textarea {
 .uploader__submit-button {
   background-color: white;
   background-color: transparent;
-  border: 2px solid #8965e0;
+  border: 2px solid #086637;
   border-radius: 5px;
-  color: #8965e0;
+  color: #086637;
   display: block;
   font-size: 0.8em;
   max-width: 15em;
@@ -604,7 +604,6 @@ body {
 
 body {
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 1em;
 }
 
 h1,
