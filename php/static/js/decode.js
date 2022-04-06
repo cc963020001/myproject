@@ -6,15 +6,15 @@ $("#de_file").change(function() {
 		swal({
 			title: "错误信息",
 			text: '请上传PHP文件！',
-			icon: 'warning'
+			icon: 'error'
 		});
 		chushihua();
 		return;
-	}else if(file.size>((1024*1024)*2)){
+	}else if(file.size>(1024*1024)){
 		swal({
 			title: "错误信息",
-			text: '文件大小超出限制(2MB)！',
-			icon: 'warning'
+			text: '文件大小超出限制(1MB)！',
+			icon: 'error'
 		});
 		chushihua();
 		return;
@@ -22,7 +22,7 @@ $("#de_file").change(function() {
 	reader.onload = function(e) {
 		filedata = e.target.result;
 		$.ajax({
-			url: 'https://decode.xiaojieapi.com/api/upcode',
+			url: '//decode.xiaojieapi.com/api/upcode',
 			type: 'post',
 			data: {
 				"filedata": filedata,
@@ -44,7 +44,7 @@ $("#de_file").change(function() {
 					swal({
 						title: "错误信息",
 						text: res.msg,
-						icon: 'warning'
+						icon: 'error'
 					});
 					chushihua();
 				}
@@ -65,7 +65,7 @@ $("#de_file").change(function() {
 		swal({
 			title: "错误信息",
 			text: '未选择文件！',
-			icon: 'warning'
+			icon: 'error'
 		});
 		chushihua()
 	}
@@ -83,22 +83,20 @@ function de_php() {
 		swal({
 			title: "解密失败",
 			text: '请先上传文件！',
-			icon: 'warning'
+			icon: 'error'
 		});
 		chushihua();
 		return
 	}
 	var beautify=document.getElementById("beautify").checked;
 	var confusion=document.getElementById("confusion").checked;
-	var debugging=document.getElementById("debugging").checked;
 	$.ajax({
-		url: 'https://decode.xiaojieapi.com/api/decode',
+		url: '//decode.xiaojieapi.com/api/decode',
 		type: 'post',
 		data: {
 			"token": token,
 			"beautify": beautify,
 			"confusion": confusion,
-			"debugging": debugging,
 		},
 		dataType: "json",
 		async: false,
@@ -113,7 +111,7 @@ function de_php() {
 				swal({
 				title: "解密失败",
 				text: res.msg,
-				icon: 'warning'
+				icon: 'error'
 				});
 			}
 		},
@@ -144,7 +142,7 @@ swal({
 })
 .then((willDelete) => {
   if (willDelete) {
-  window.open(res.url,"_blank");
+  window.open("//decode.xiaojieapi.com" + res.url,"_blank");
   } else {
   }
 });
